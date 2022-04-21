@@ -1,0 +1,29 @@
+{
+  "name": "socialmern",
+  "version": "1.0.0",
+  "description": "test proj",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "react",
+    "node",
+    "mongo"
+  ],
+  "author": "Mikhail Kvach <mkvach@mail.ru>",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "config": "^3.3.7",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.10"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "nodemon": "^2.0.15"
+  }
+}

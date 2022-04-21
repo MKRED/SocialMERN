@@ -1,0 +1,4 @@
+{
+  "port": 5000,
+  "mongourl": "mongodb+srv://kvach:1234qwer@cluster0.pjgt5.mongodb.net/socialdb?retryWrites=true&w=majority"
+}
