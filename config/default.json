@@ -1,4 +1,5 @@
 {
   "port": 5000,
+  "jwtSecret": "social app mkred",
   "mongourl": "mongodb+srv://kvach:1234qwer@cluster0.pjgt5.mongodb.net/socialdb?retryWrites=true&w=majority"
 }

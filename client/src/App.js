@@ -1,7 +1,10 @@
 import React, {useState} from "react"
 import 'materialize-css'
+import {useRoutes} from "./routes";
+import {BrowserRouter} from "react-router-dom";
 
 function App() {
+    const routes = useRoutes(false)
 
     const [count, setCount] = useState(0)
 
@@ -10,19 +13,12 @@ function App() {
         console.log('Count', count)
     }
 
-
     return (
-        <div className='grey darken-3 container-body'>
-            <div className='container'>
-                <div className='container-flex'>
-                    <h3>Counter: {count}</h3>
-                    <button className='btn-floating btn-large waves-effect waves-light green' onClick={addCount}>
-                        <i className="material-icons">+</i>
-                    </button>
-                    <button>Send</button>
-                </div>
+        <BrowserRouter>
+            <div className='grey darken-3 container-body'>
+                { routes }
             </div>
-        </div>
+        </BrowserRouter>
     );
 }
 

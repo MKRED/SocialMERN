@@ -1,13 +1,13 @@
 import express from "express"
 import config from "config"
 import mongoose from "mongoose";
-import router from './routes/count.routes.js'
+import routerAuth from './routes/auth.routes.js'
 
 const app = express()
 const PORT = config.get('port') || 5000
 const MongoUrl = config.get('mongourl')
 
-app.use('/api/count', router)
+app.use('/api/auth', routerAuth)
 
 const start = async () => {
     try {
