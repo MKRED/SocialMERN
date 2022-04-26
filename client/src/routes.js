@@ -10,6 +10,7 @@ export const useRoutes = isAuth => {
             <Routes>
                 <Route path="/match" element={<MatchPage />} />
                 <Route path="/profile" element={<ProfilePage />} />
+                <Route path="*" element={<Navigate replace to="/match" />} />
             </Routes>
         )
     }
@@ -17,6 +18,7 @@ export const useRoutes = isAuth => {
     return (
         <Routes>
             <Route path="/" element={<AuthPage />} />
+            <Route path="*" element={<Navigate replace to="/" />} />
         </Routes>
     )
 }
